@@ -17,9 +17,6 @@
 
 </head>
 <body>
-
-<!--首页-->
-
 <div data-role="page" id="index">
     <div data-role="header">
     <h1>订餐</h1>
@@ -29,9 +26,6 @@
         <a href="#ordermenu" data-role="button" id="check" class="check">看订单</a>
     </div>
 </div>
-
-<!--订餐页面-->
-
 <div data-role="page" id="ordermeal">
     <div data-role="header">
         <a href="#index" data-role="button" data-theme="a">back</a>
@@ -40,7 +34,7 @@
     <div data-role="content">
         <div><label for="user">人：</label>
              <input type="text" id="user" class="user"/></div>
-        <div><a href="#person" data-role="button" id="choseUser" class="choseUser" >选人</a></div>
+        <div><a href="#person" data-role="button" id="choseUser" class="choseUser" onclick="create_user_name_list()">选人</a></div>
 
         <div><label for="res">餐厅：</label>
              <input type="text" id="res" class="res"/></div>
@@ -64,9 +58,6 @@
     </div>
     <div data-role="content">
         <ul data-role="listview" id="users">
-                  <script>
-                      loadUser();
-                  </script>
         </ul>
     </div>
 </div>

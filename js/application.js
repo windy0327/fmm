@@ -1,19 +1,20 @@
 //显示人名
-function loadUser(){
-    var str="";
-    for(var i=0;i<users.length;i++) {
-        var x="<li><a href='#' onclick='getUser(";
-        var y=users[i].name;
-        var z=")'>";
-        var m="</a></li>";
-        var n='"';
-        str+= x+n+y+n+z+y+m;
+function create_user_name_list(){
+    var user_name_list="";
+    for(var i=0;i<users.length;i++)
+    {
+        user_name_list+= "<li><a href='#' onclick='get_user_name("+'"'+users[i].name+'"'+")'></a>"+users[i].name+"</li>";
     }
-    $("#users").html(str);
+
+    show_list("users",user_name_list);
+}
+function show_list(id,list){
+    $("#"+id).html(list);
+
 }
 
 //得到人名
-function  getUser(user){
+function  get_user_name(user){
     window.localStorage.user=user;
     window.location.href="#ordermeal";
     readUser();
